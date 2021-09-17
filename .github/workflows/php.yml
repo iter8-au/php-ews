@@ -20,6 +20,9 @@ jobs:
           ini-values: post_max_size=256M, max_execution_time=180
           coverage: xdebug
 
+      - name: Install Composer dependencies
+        run: composer install --no-progress --prefer-dist --optimize-autoloader
+
       - name: Codestyle Check
         run: composer cs
 
