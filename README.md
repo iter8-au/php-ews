@@ -1,5 +1,5 @@
 # PHP Exchange Web Services
-[![Build Status](https://travis-ci.org/Garethp/php-ews.svg?branch=master)](https://travis-ci.org/Garethp/php-ews)
+[![Build Status](https://github.com/Garethp/php-ews/actions/workflows/php.yml/badge.svg)](https://github.com/Garethp/php-ews/actions/workflows/php.yml)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/garethp/php-ews/badges/quality-score.png)](https://scrutinizer-ci.com/g/garethp/php-ews/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/garethp/php-ews/badges/coverage.png)](https://scrutinizer-ci.com/g/garethp/php-ews/?branch=master)
 
