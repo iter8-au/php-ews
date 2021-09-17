@@ -27,4 +27,9 @@ jobs:
         run: composer cs
 
       - name: PHPUnit
-        run: ./vendor/bin/phpunit
+        run: XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+    - name: Upload Scrutinizer coverage
+      uses: sudo-bot/action-scrutinizer@latest
+      with:
+        cli-args: "--format=php-clover build/logs/clover.xml"
