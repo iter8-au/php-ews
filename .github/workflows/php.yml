@@ -21,7 +21,7 @@ jobs:
           coverage: xdebug
 
       - name: Install Composer dependencies
-        run: composer install --no-progress --prefer-dist --optimize-autoloader
+        run: composer install --no-progress
 
       - name: Codestyle Check
         run: composer cs
