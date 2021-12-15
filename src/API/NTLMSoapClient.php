@@ -203,6 +203,13 @@ class NTLMSoapClient extends SoapClient
             'http_errors' => false
         );
 
+        if ($this->ewsHeaders['impersonation'] instanceof SoapHeader) {
+            $headerData = $this->ewsHeaders['impersonation']->data;
+            $impersonationAddress = $headerData->ConnectingSID->PrimarySmtpAddress;
+            $postOptions['headers']['X-AnchorMailbox'] = $impersonationAddress;
+            $postOptions['headers']['X-PreferServerAffinity'] = true;
+        }
+
         $postOptions = array_replace_recursive($postOptions, $this->auth);
 
         $response = $this->httpClient->post($location, $postOptions);
